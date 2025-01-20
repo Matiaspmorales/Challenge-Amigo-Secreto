@@ -9,5 +9,17 @@ function agregarAmigo(){
         document.getElementById('amigo').value = '';
         // console.log() para validar que la lista contenga elementos
         console.log(amigos)
+        recorrerArray();
+    }
+}
+
+
+function recorrerArray(){
+    let listaAmigos = document.getElementById('listaAmigos')
+    listaAmigos.innerHTML = "";
+    for (amigo of amigos){
+        let nuevo_elemento = document.createElement('li');
+        nuevo_elemento.textContent = amigo;
+        listaAmigos.appendChild(nuevo_elemento);
     }
 }
